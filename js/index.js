@@ -52,7 +52,14 @@ function SaveToDisk(fileURL, fileName) {
     }
 }
 // Public variable 
-var countryCity; var countryName;
+var countryCity; var countryName; var temario = "TEMARIO PM";
+
+// Descargar archivo al pulsar el botón
+
+$('.itsystems-temario-tag').on('click', function () {
+    SaveToDisk("files/"+ temario +".pdf", temario);
+});
+
 // Registration Form Validation
 $(document).ready(function(){
     // Intl-Telf-Input
@@ -179,8 +186,6 @@ $(document).ready(function(){
             var paisSel = iti1.getSelectedCountryData().name;
             var ciudad = countryCity;
             var paisR = countryName;
-            // Nombre del temario
-            var temario = "Temario RPA - ROBOTIZACION PROCESOS";
 
             $.ajax({
                 url: '',
@@ -194,9 +199,9 @@ $(document).ready(function(){
                     "entry.1412086532": email,
                     "entry.1444273475": telf,
                     "entry.900012785": cargo,
-                    "entry.1086137710": tipoDoc,
-                    "entry.1991317504": nroDoc,
-                    "entry.64693255": empresa
+                    "entry.233026433": tipoDoc,
+                    "entry.16724696": nroDoc,
+                    "entry.1811869299": empresa
                 },
                 success: function(data) {
                     console.log(data);
@@ -349,7 +354,7 @@ $(document).ready(function(){
             var paisR = countryName
             var ciudad = countryCity;
             // Nombre del temario
-            var temario = "Temario RPA - ROBOTIZACION PROCESOS";
+            var temario = "TEMARIO PM";
 
             $.ajax({
                 url: '',
@@ -363,9 +368,9 @@ $(document).ready(function(){
                     "entry.1412086532": email,
                     "entry.1444273475": telf,
                     "entry.900012785": cargo,
-                    "entry.1086137710": tipoDoc,
-                    "entry.1991317504": nroDoc,
-                    "entry.64693255": empresa
+                    "entry.233026433": tipoDoc,
+                    "entry.16724696": nroDoc,
+                    "entry.1811869299": empresa
                 },
                 success: function(data) {
                     console.log(data);
