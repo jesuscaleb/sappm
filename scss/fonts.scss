@@ -1,0 +1,23 @@
+/* Fonts */
+
+/* Gothan Bold*/
+@font-face {
+    font-family: Gothan Bold;
+    font-weight: bold;
+    src: url("../fonts/GothamBold.otf") format("opentype");
+}
+
+/* Gothan Book*/
+@font-face {
+    font-family: Gothan Book;
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/GothamBook.ttf") format("opentype");
+}
+
+/* Gothan Medium Italic */
+@font-face {
+    font-family: Gothan Medium;
+    font-style: normal;
+    src: url("../fonts/GothamMedium.ttf") format("opentype");
+}

@@ -1,0 +1,490 @@
+@import "bootstrap/bootstrap.scss";
+@import "fonts.scss";
+@import "intl-telf-input.scss";
+
+// Variables
+$lgtblue : rgb(60,223,255);
+$blue-63: rgb(1,1,63);
+$blue-43: rgb(1,1,43);
+$blue: rgb(38,38,114);
+$gray: rgb(173, 173, 173);
+$white: rgb(255, 255, 255);
+$red: rgb(196, 0, 20);
+
+$rgb-gray: rgb(17,17,17);
+$rgb-yellow: rgb(255,237,0);
+$rgb-gray81: rgb(81,81,81);
+$rgb-gray59: rgb(59, 59, 59);
+$rgb-black: rgb(0, 0, 0);
+
+$rgba-black: rgba(0, 0, 0,0.65);
+// Images
+$bg-header : "/img/bgheader.jpg";
+$obj-right : "/img/ind.png";
+
+// Screen Resolutions
+$break-large : 1200px;
+$break-sm-max: 680px;
+$break-medium: 768px;
+$break-large-min: 1300px;
+$break-small: 370px;
+html,
+body {
+  height: 100%;
+}
+
+#itsystems-content {
+  flex: 1 0 auto;
+}
+
+.itsystems-footer {
+  flex-shrink: none;
+}
+
+.button-row{
+  button[type="submit"]{
+    width: 50% !important;
+  }
+}
+
+/* Main classes */
+
+.dark-layout{
+    background-color: $rgba-black;
+}
+
+.error{
+  color: $red;
+  font-family: Gothan Book;
+  font-size: 13px;
+}
+
+.white-title{
+  font-family: Gothan Medium;
+  color: $white;
+}
+
+.dark-title{
+  font-family: Gothan Medium;
+  color: $rgb-gray;
+}
+
+.white-li{
+  li{
+    font-family: Gothan Book;
+    color: $white;
+  }
+}
+
+.lgtblue-li{
+  li{
+    font-family: Gothan Book;
+    color: $lgtblue;
+  }
+}
+
+.white-bold-title{
+  font-family: Gothan Bold;
+  font-weight: bold;
+  color: $white;
+}
+
+.yellow-sub{
+  font-family: Gothan Book;
+  color: $rgb-yellow;
+}
+
+.gray-text{
+  font-family: Gothan Book;
+  color: $gray;
+}
+
+/* Header */ 
+
+.itsystems-header{
+  padding-bottom: 2.4em;
+  // padding-top: 2.5em;
+}
+
+.bg-header{
+  background-image: url($bg-header);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.itsystems-head-logo{
+  max-width: 260px;
+  margin-left: auto;
+  img{
+    width: 100%;
+  }
+}
+
+.itsystems-head-title{
+    h3{
+        text-transform: uppercase;
+        margin-bottom: 20px ;
+    }
+    text-align: right;
+}
+
+.itsystems-head-title-img{
+    margin-left: auto;
+    margin-bottom: 15px;
+    img{
+        max-width: 150px;
+    }
+}
+
+.itsystems-head-sub{
+  color: $white;
+  font-family: Gothan Book;
+  text-align: right;
+  font-size: 14px;
+}
+
+/* Form */
+
+.itsystems-div-form{
+  background-color: $rgb-gray;
+}
+
+.itsystems-form-top{
+  p{
+    font-size: 20px;
+  }
+}
+
+.form1{
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.form-top1{
+  padding-top: 40px;
+}
+
+.itsystems-form{
+  input, select{
+    border-radius: 0px;
+    background-color: $rgb-gray81;
+    border-color: $rgb-gray81;
+    font-family: Gothan Book;
+    color: $gray;
+  }
+
+  select{
+    font-size: 14.3px;
+  }
+  .chkAuto{
+    color: $white;
+    font-family: Gothan Book;
+  }
+  .chkAuto:before{
+    border-radius: 0px ;
+    background-color: $white ;
+    border-color: $white ;
+  }
+  
+  ::placeholder {
+    color: $gray;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder, :-ms-select-placeholder { /* Internet Explorer 10-11 */
+    color: $gray;    
+  }
+  
+  ::-ms-input-placeholder, ::-ms-select-placeholder { /* Microsoft Edge */
+    color: $gray;
+  }
+}
+
+.button-head{
+  margin-top: 25px;
+  button[type='submit']{
+    border-radius: 0px;  
+    background-color: $rgb-yellow;
+    border-color: $rgb-yellow;
+    color: $rgb-gray;
+    font-family: Gothan Bold;      
+    font-size: 15px;
+  }
+}
+
+/* Main Info */
+.itsystems-main{
+  margin: 50px;
+}
+
+.itsystems-main-left{
+  width: 200px;
+  height: auto;
+}
+
+.itsystems-main-right{
+  h3{
+    margin-bottom: 15px;
+    color: $rgb-gray81;
+    @media screen and (max-width: $break-small) {
+      font-size: 18px;
+    }
+  }
+  
+  p{
+    font-family: Gothan Book;
+    color: $rgb-gray81;
+  }
+
+  p:last-child{
+    margin-bottom: 0px;
+  }
+}
+
+/* Objetivos */
+
+.itsystems-obj-left{
+  background-color: $rgb-gray59;
+  padding:40px;
+
+  .itsystems-obj-title{
+    padding-bottom: 20px;
+    .yellow-line{
+      width: 100px;
+      height: 1px;
+      background-color: $rgb-yellow;
+      margin-top: 10px;
+    }
+  }
+  
+  .itsystems-obj-content{
+    font-size: 17px;
+    p{
+      color: $white;
+      font-family: Gothan Book;
+      text-align: justify;
+    }
+    ul{
+      padding-left: 1px;
+      li{
+        list-style-type: none;       
+        font-family: Gothan Book;
+        padding-bottom: 10px;
+      }
+      li:before{
+        content: '-';
+      }
+    }
+
+    .itsystems-obj-ul1{
+      color: $white;
+    }
+    .itsystems-obj-ul2{
+      color: $white;
+    }
+  }
+}
+
+.itsystems-obj-right{
+  background-image: url($obj-right);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.itsystems-obj-bottom{
+  margin-top: 30px;
+  padding: 30px;
+  .obj-bot-item{
+    margin-right: 7%;
+    padding-top: 12px;
+    padding-left: 0px;
+    p{
+      margin-bottom: 0px;
+    }
+    p:first-child{
+      color: $rgb-yellow;
+      font-family: Gothan Bold;
+    }
+    p:last-child{
+      color: $white;
+      font-family: Gothan Book;
+    }
+  }
+
+  .obj-bot-item:last-child{
+    margin-right: 0px;
+  }
+
+  .vertical-line{
+    height: 100px;
+    background-color: $rgb-yellow;
+    width: 1px;
+    margin-right: 40px;
+  }
+}
+
+.bg-obj-bottom{
+  background-color: $rgb-gray59
+}
+
+/* Info */
+.itsystems-info{
+  margin-top: 40px;
+  margin-bottom: 60px;
+  
+
+  .itsystems-info-title{
+    width: 540px;
+    
+  }
+  .horizontal-line{
+    width: 610px;
+    height: 1px;
+    background-color: $rgb-gray;    
+  }
+
+  .itsystems-info-item{
+    p{
+      padding-top: 10px;
+      font-family: Gothan Book;
+      color: $rgb-gray81;
+      font-size: 16.5px;
+
+      width: 210px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+
+  .itsystems-info-icon{
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    img{
+      max-width: 80px;
+      height: auto;
+    }
+  }
+}
+
+/* Temario */
+.itsystems-temario{
+  .border-temario{
+    border: $rgb-gray59 solid 1px;
+  }
+  .itsystems-temario-title{
+    margin-bottom: 60px;
+    margin-top: 25px;
+  }
+  .itsystems-temario-content{
+    margin-bottom: 40px;
+    .itsystems-temario-column{
+      p{
+        color: $rgb-gray81;
+        font-family: Gothan Book;
+      }
+    }
+  }
+  .itsystems-temario-tema{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    .itsystems-tema-item{
+        ul{
+            padding-left: 1px;
+            li{
+              list-style-type: none;       
+              font-family: Gothan Book;
+              padding-bottom: 10px;
+              color: $rgb-gray81;
+            }
+            li:before{
+              content: '-';
+            }
+          }
+    }
+  }
+
+  .itsystems-temario-tag{
+    cursor: pointer;
+    width: 350px; //170px
+    background-color: $rgb-gray;
+    padding: 20px;
+    margin-top: 25px;
+    span{
+      font-family: Gothan Bold;
+      color: $rgb-yellow;
+    }
+    @media screen and (max-width: $break-small) {
+      width: 170px;
+    }
+  }
+}
+
+/*Form 2*/
+.form2{
+  padding: 40px;
+  margin-top: 50px;
+}
+.button-row{
+  margin-top: 25px;
+  button[type='submit']{
+    border-radius: 0px;  
+    background-color: $rgb-yellow;
+    border-color: $rgb-yellow;
+    color: $rgb-gray;
+    font-family: Gothan Bold;      
+    font-size: 15px;
+  }
+}
+
+/* Footer */
+.itsystems-footer{
+  margin-top: 60px;
+  .itsystems-pre-footer{
+    
+    background-color: $rgb-gray;
+    .itsystems-footer-contacto{
+      margin-top: 30px;
+      p{
+        font-size: 13px;
+        color: $white;
+        margin-bottom: 0px;
+        font-family: Gothan Book;
+    }
+  }
+  .itsystems-footer-logo{
+    max-width: 65%;
+    margin-left: auto;
+  }
+}
+
+.itsystems-footer-post{
+  background-color: $rgb-black;
+  color: $gray;
+  font-family: Gothan Book;
+}
+}
+
+// Custom intl-telf-input code
+.iti__flag {background-image: url("/img/icons/flags.png");}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("/img/icons/flags@2x.png");}
+}
+
+.iti{
+  width: 100%;
+}
+
+.iti__selected-flag{
+  background-color: $rgb-gray !important;
+}
+
+.iti__selected-dial-code, .iti__arrow{
+  color: $gray !important;
+}
+
